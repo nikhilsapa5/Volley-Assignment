@@ -1,0 +1,164 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "fizz buzz game",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "forget it",
+            "never mind",
+            "cancel"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "please help me",
+            "can you help me",
+            "help is required",
+            "help",
+            "need help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "quit",
+            "exit",
+            "close",
+            "turn off",
+            "stop"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "UserIntent",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "fizz",
+              "type": "fizz"
+            },
+            {
+              "name": "buzz",
+              "type": "buzz"
+            },
+            {
+              "name": "fizzbuzz",
+              "type": "fizzbuzz"
+            }
+          ],
+          "samples": [
+            "{fizzbuzz}",
+            "{buzz}",
+            "{fizz}",
+            "{number}"
+          ]
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": [
+            "pardon",
+            "say it again",
+            "didn\u0027t get it",
+            "repeat previous statement",
+            "repeat that",
+            "please repeat",
+            "say that again",
+            "repeat"
+          ]
+        },
+        {
+          "name": "StartAtSpecificNumber",
+          "slots": [
+            {
+              "name": "num",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "begin game {num}",
+            "begin game from {num}",
+            "start game from {num}",
+            "start game at {num}"
+          ]
+        },
+        {
+          "name": "PreviouslyLostAtNumber",
+          "slots": [],
+          "samples": [
+            "at what number I lost in previous game",
+            "previously lost at",
+            "previous game details"
+          ]
+        },
+        {
+          "name": "DeleteHistory",
+          "slots": [],
+          "samples": [
+            "delete all historical data",
+            "reset game history",
+            "format history",
+            "clear history",
+            "remove history",
+            "delete game history"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "fizz"
+              }
+            }
+          ],
+          "name": "fizz"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "buzz"
+              }
+            }
+          ],
+          "name": "buzz"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "fizz buzz"
+              }
+            },
+            {
+              "name": {
+                "value": "fizzbuzz"
+              }
+            }
+          ],
+          "name": "fizzbuzz"
+        }
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    }
+  },
+  "version": "22"
+}
